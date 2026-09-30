@@ -22,19 +22,39 @@ export async function POST(request: Request) {
       );
     }
 
+    const user = process.env.EMAIL_USER || process.env.NODEMAILER_USER;
+    const pass = process.env.EMAIL_PASS || process.env.NODEMAILER_PASS;
+    const to = process.env.CONTACT_TO_EMAIL || process.env.CONTACT_EMAIL_TO || user;
+
+    // Si no hay credenciales configuradas (modo prueba / despliegue inicial), simulamos el éxito
+    if (!user || !pass) {
+      console.log('[contact/route] Modo prueba activo (sin credenciales de email). Mensaje recibido:', {
+        name: body.name,
+        email: body.email,
+        company: body.company,
+        service: body.service,
+        message: body.message,
+      });
+
+      return NextResponse.json({
+        success: true,
+        message: 'Mensaje recibido correctamente (modo prueba)',
+      });
+    }
+
     const transporter = createTransport({
-      host:   process.env.NODEMAILER_HOST,
+      host:   process.env.NODEMAILER_HOST || 'smtp.gmail.com',
       port:   Number(process.env.NODEMAILER_PORT ?? 587),
       secure: false,
       auth: {
-        user: process.env.NODEMAILER_USER,
-        pass: process.env.NODEMAILER_PASS,
+        user,
+        pass,
       },
     });
 
     await transporter.sendMail({
-      from:    `"CreatIA Web" <${process.env.NODEMAILER_USER}>`,
-      to:      process.env.CONTACT_EMAIL_TO,
+      from:    `"CreatIA Web" <${user}>`,
+      to:      to || user,
       replyTo: body.email,
       subject: `[CreatIA] Nuevo mensaje de ${body.name} — ${body.service}`,
       html: `
