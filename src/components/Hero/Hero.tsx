@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/Button/Button';
 import styles from './Hero.module.css';
@@ -12,12 +12,12 @@ const ParticleCanvas = dynamic(
   { ssr: false }
 );
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden:  {},
   visible: { transition: { staggerChildren: 0.18 } },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden:  { opacity: 0, y: 28 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
 };

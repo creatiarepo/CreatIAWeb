@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { Check, type LucideIcon } from 'lucide-react';
 import styles from './Services.module.css';
 
@@ -11,7 +11,7 @@ interface ServiceCardProps {
   details: string[];
 }
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden:  { opacity: 0, y: 32 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: 'easeOut' } },
 };
