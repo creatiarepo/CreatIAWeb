@@ -1,0 +1,159 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "whyUs": "¿Por qué CreatIA?",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "langSwitch": "EN"
+  },
+  "hero": {
+    "headline": "Transformamos ideas en",
+    "headlineAccent": "soluciones inteligentes",
+    "subheadline": "Desarrollamos apps web, automatizamos procesos e integramos IA para llevar tu negocio al siguiente nivel.",
+    "cta_primary": "Ver servicios",
+    "cta_secondary": "Contáctanos",
+    "scrollHint": "Descubre más"
+  },
+  "services": {
+    "tag": "Lo que hacemos",
+    "title": "Nuestros",
+    "titleAccent": "Servicios",
+    "description": "Soluciones tecnológicas de alto impacto diseñadas para transformar y escalar tu negocio.",
+    "items": [
+      {
+        "id": "webapp",
+        "title": "Desarrollo Web",
+        "description": "Construimos aplicaciones web modernas, rápidas y escalables con las mejores tecnologías del mercado.",
+        "details": ["Next.js & React", "APIs REST & GraphQL", "Bases de datos", "Diseño responsivo"]
+      },
+      {
+        "id": "automation",
+        "title": "Automatizaciones",
+        "description": "Eliminamos tareas repetitivas y optimizamos tus flujos de trabajo con automatizaciones inteligentes.",
+        "details": ["Flujos n8n & Zapier", "Integración de sistemas", "RPA", "Reportes automáticos"]
+      },
+      {
+        "id": "ai",
+        "title": "Integración con IA",
+        "description": "Potenciamos tu empresa con inteligencia artificial aplicada: modelos de lenguaje, visión y análisis de datos.",
+        "details": ["LLMs & GPT", "Análisis predictivo", "Procesamiento de documentos", "IA personalizada"]
+      },
+      {
+        "id": "chatbot",
+        "title": "Chatbots Agénticos",
+        "description": "Creamos asistentes inteligentes que no solo responden, sino que actúan y toman decisiones.",
+        "details": ["Agentes autónomos", "Integración multicanal", "WhatsApp & Slack", "Memoria contextual"]
+      }
+    ]
+  },
+  "whyCreatia": {
+    "tag": "Nuestra diferencia",
+    "title": "¿Por qué elegir",
+    "titleAccent": "CreatIA?",
+    "description": "No somos una agencia más. Somos tu socio tecnológico enfocado en resultados reales.",
+    "stats": [
+      { "value": "50+", "label": "Proyectos entregados" },
+      { "value": "98%", "label": "Clientes satisfechos" },
+      { "value": "3x", "label": "Retorno promedio" },
+      { "value": "24/7", "label": "Soporte continuo" }
+    ],
+    "reasons": [
+      {
+        "title": "Tecnología de vanguardia",
+        "description": "Usamos las herramientas más modernas y probadas del ecosistema tecnológico actual."
+      },
+      {
+        "title": "Enfoque en resultados",
+        "description": "Cada proyecto se mide por el impacto real que genera en tu negocio, no solo por el código."
+      },
+      {
+        "title": "Equipo especializado",
+        "description": "Desarrolladores, diseñadores y especialistas en IA trabajando juntos en tu proyecto."
+      },
+      {
+        "title": "Entregas ágiles",
+        "description": "Metodología ágil que garantiza visibilidad, rapidez y calidad en cada entrega."
+      },
+      {
+        "title": "Escalabilidad garantizada",
+        "description": "Arquitecturas pensadas para crecer contigo sin necesidad de reescribir todo desde cero."
+      },
+      {
+        "title": "Soporte post-lanzamiento",
+        "description": "No desaparecemos al entregar. Estamos contigo en cada etapa del crecimiento."
+      }
+    ]
+  },
+  "about": {
+    "tag": "Quiénes somos",
+    "title": "El equipo detrás de",
+    "titleAccent": "CreatIA",
+    "mission": "Nuestra misión es democratizar el acceso a la tecnología inteligente, ayudando a empresas a transformar sus procesos con soluciones de software innovadoras.",
+    "vision": "Ser el socio tecnológico de referencia en Latinoamérica para empresas que quieren liderar con inteligencia artificial y automatización.",
+    "missionLabel": "Misión",
+    "visionLabel": "Visión",
+    "team": [
+      {
+        "name": "Equipo CreatIA",
+        "role": "Desarrollo & IA",
+        "description": "Apasionados por la tecnología y el impacto que puede generar en los negocios."
+      }
+    ]
+  },
+  "contact": {
+    "tag": "Hablemos",
+    "title": "¿Listo para",
+    "titleAccent": "transformar tu negocio?",
+    "description": "Cuéntanos tu proyecto y te respondemos en menos de 24 horas.",
+    "form": {
+      "name": "Nombre completo",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "company": "Empresa (opcional)",
+      "companyPlaceholder": "Nombre de tu empresa",
+      "service": "Servicio de interés",
+      "servicePlaceholder": "Selecciona un servicio",
+      "serviceOptions": ["Desarrollo Web", "Automatizaciones", "Integración con IA", "Chatbot Agéntico", "Otro"],
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos sobre tu proyecto...",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando...",
+      "successTitle": "¡Mensaje enviado!",
+      "successMessage": "Nos pondremos en contacto contigo en menos de 24 horas.",
+      "errorMessage": "Algo salió mal. Por favor intenta de nuevo."
+    },
+    "info": {
+      "emailLabel": "Email",
+      "email": "hola@creatia.co",
+      "whatsappLabel": "WhatsApp",
+      "whatsapp": "Escríbenos directamente",
+      "locationLabel": "Ubicación",
+      "location": "Colombia — Remoto mundial"
+    }
+  },
+  "footer": {
+    "tagline": "Creatividad · Innovación · Automatización",
+    "description": "Transformamos ideas en soluciones inteligentes con tecnología de vanguardia.",
+    "links": {
+      "title": "Navegación",
+      "services": "Servicios",
+      "whyUs": "¿Por qué nosotros?",
+      "about": "Nosotros",
+      "contact": "Contacto"
+    },
+    "services": {
+      "title": "Servicios",
+      "webapp": "Desarrollo Web",
+      "automation": "Automatizaciones",
+      "ai": "Integración con IA",
+      "chatbot": "Chatbots Agénticos"
+    },
+    "legal": {
+      "privacy": "Política de privacidad",
+      "terms": "Términos de uso"
+    },
+    "copyright": "© {year} CreatIA. Todos los derechos reservados.",
+    "whatsappTooltip": "Chatea con nosotros"
+  }
+}
