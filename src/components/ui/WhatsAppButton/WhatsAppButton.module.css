@@ -1,0 +1,78 @@
+.button {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.40);
+  transition: transform var(--transition-spring), box-shadow var(--transition-base);
+}
+
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 32px rgba(37, 211, 102, 0.55);
+}
+
+.button:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-8px);
+  pointer-events: auto;
+}
+
+/* ---- PULSE RINGS ---- */
+.pulseRing,
+.pulseRing2 {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.35);
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+.pulseRing2 {
+  animation-delay: 0.7s;
+}
+
+/* ---- ÍCONO ---- */
+.icon {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+/* ---- TOOLTIP ---- */
+.tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(0);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 6px 12px;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+@media (max-width: 480px) {
+  .button {
+    bottom: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+  }
+}
