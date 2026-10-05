@@ -7,7 +7,6 @@ import { useRef } from 'react';
 import { Globe, Zap, Brain, MessageSquare } from 'lucide-react';
 import { SectionTitle } from '@/components/ui/SectionTitle/SectionTitle';
 import { ServiceCard } from './ServiceCard';
-import styles from './Services.module.css';
 
 const ICONS = [Globe, Zap, Brain, MessageSquare];
 
@@ -29,8 +28,8 @@ export function Services() {
   }>;
 
   return (
-    <section id="servicios" ref={ref} className={`section ${styles.services}`}>
-      <div className="container">
+    <section id="servicios" ref={ref} className="py-24 md:py-32 relative">
+      <div className="container mx-auto px-6 max-w-[1140px]">
         <SectionTitle
           tag={t('tag')}
           title={t('title')}
@@ -39,7 +38,7 @@ export function Services() {
         />
 
         <motion.div
-          className={styles.grid}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-16"
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}

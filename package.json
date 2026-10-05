@@ -10,14 +10,21 @@
   },
   "dependencies": {
     "@types/nodemailer": "^8.0.2",
+    "autoprefixer": "^10.6.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "framer-motion": "^13.4.6",
     "lucide-react": "^1.49.0",
     "next": "^14.2.35",
     "next-intl": "^4.14.8",
+    "next-themes": "^0.4.6",
     "nodemailer": "^10.0.13",
+    "postcss": "^8.5.29",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.89.0"
+    "react-hook-form": "^7.89.0",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^3.4.19"
   },
   "devDependencies": {
     "@types/node": "^20",

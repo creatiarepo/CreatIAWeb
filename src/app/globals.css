@@ -4,13 +4,30 @@
    estilos de tipografía base. Sin más.
    ============================================ */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --bg-primary: #FFFFFF;
+    --text-primary: #0A0A0A;
+    --text-secondary: #525252;
+  }
+  .dark {
+    --bg-primary: #08090C;
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+  }
+}
 
 /* ---- TOKENS DE DISEÑO ---- */
 :root {
-  /* FONDOS */
-  --bg-deep:        #0D1B2A;
-  --bg-surface:     #112240;
+  /* FONDOS (Legacy) */
+  --bg-deep:        var(--bg-primary);
+  --bg-surface:     var(--bg-primary);
   --bg-elevated:    #1a2f4a;
 
   /* ACENTOS */

@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import styles from './Footer.module.css';
 
 const NAV_SECTIONS = [
   { href: '#servicios', key: 'services' },
@@ -22,24 +21,30 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className={styles.footer} role="contentinfo">
-      <div className={`container ${styles.inner}`}>
+    <footer className="pt-20 pb-8 bg-neutral-100 dark:bg-[#030303] border-t border-black/5 dark:border-white/5" role="contentinfo">
+      <div className="container mx-auto px-6 max-w-[1140px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         {/* Brand */}
-        <div className={styles.brand}>
-          <div className={styles.logo}>
-            <span className={styles.logoText}>Creat</span>
-            <span className={styles.logoAccent}>IA</span>
+        <div className="lg:col-span-2 flex flex-col gap-4">
+          <div className="font-display text-2xl font-bold tracking-tight text-neutral-900 dark:text-white">
+            <span>Creat</span>
+            <span className="text-[#38BDF8]">IA</span>
           </div>
-          <p className={styles.tagline}>{t('tagline')}</p>
-          <p className={styles.desc}>{t('description')}</p>
+          <p className="font-display text-sm font-semibold tracking-wider uppercase text-neutral-500 dark:text-neutral-400">
+            {t('tagline')}
+          </p>
+          <p className="font-body text-[15px] text-neutral-600 dark:text-neutral-500 max-w-sm leading-relaxed mt-2">
+            {t('description')}
+          </p>
         </div>
 
         {/* Links */}
-        <div className={styles.linksCol}>
-          <span className={styles.colTitle}>{t('links.title')}</span>
-          <nav aria-label="Footer navegación">
+        <div className="flex flex-col gap-5">
+          <span className="font-display text-sm font-bold tracking-wider uppercase text-neutral-900 dark:text-white">
+            {t('links.title')}
+          </span>
+          <nav aria-label="Footer navegación" className="flex flex-col gap-3">
             {NAV_SECTIONS.map(({ href, key }) => (
-              <a key={key} href={href} className={styles.link}>
+              <a key={key} href={href} className="font-body text-[15px] text-neutral-600 dark:text-neutral-400 hover:text-[#38BDF8] dark:hover:text-[#38BDF8] transition-colors w-fit">
                 {t(`links.${key}`)}
               </a>
             ))}
@@ -47,11 +52,13 @@ export function Footer() {
         </div>
 
         {/* Services */}
-        <div className={styles.linksCol}>
-          <span className={styles.colTitle}>{t('services.title')}</span>
-          <nav aria-label="Footer servicios">
+        <div className="flex flex-col gap-5">
+          <span className="font-display text-sm font-bold tracking-wider uppercase text-neutral-900 dark:text-white">
+            {t('services.title')}
+          </span>
+          <nav aria-label="Footer servicios" className="flex flex-col gap-3">
             {SERVICE_LINKS.map(({ key }) => (
-              <a key={key} href="#servicios" className={styles.link}>
+              <a key={key} href="#servicios" className="font-body text-[15px] text-neutral-600 dark:text-neutral-400 hover:text-[#38BDF8] dark:hover:text-[#38BDF8] transition-colors w-fit">
                 {t(`services.${key}`)}
               </a>
             ))}
@@ -60,17 +67,15 @@ export function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className={styles.bottomBar}>
-        <div className="container">
-          <div className={styles.bottomInner}>
-            <span className={styles.copyright}>
-              {t.raw('copyright').toString().replace('{year}', String(year))}
-            </span>
-            <div className={styles.legalLinks}>
-              <a href="#" className={styles.legalLink}>{t('legal.privacy')}</a>
-              <span aria-hidden="true">·</span>
-              <a href="#" className={styles.legalLink}>{t('legal.terms')}</a>
-            </div>
+      <div className="pt-8 border-t border-black/5 dark:border-white/5">
+        <div className="container mx-auto px-6 max-w-[1140px] flex flex-col md:flex-row items-center justify-between gap-4">
+          <span className="font-body text-sm text-neutral-500 dark:text-neutral-500 text-center md:text-left">
+            {t.raw('copyright').toString().replace('{year}', String(year))}
+          </span>
+          <div className="flex items-center gap-4">
+            <a href="#" className="font-body text-sm text-neutral-500 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors">{t('legal.privacy')}</a>
+            <span aria-hidden="true" className="text-neutral-300 dark:text-neutral-700">·</span>
+            <a href="#" className="font-body text-sm text-neutral-500 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors">{t('legal.terms')}</a>
           </div>
         </div>
       </div>
